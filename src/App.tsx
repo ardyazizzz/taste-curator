@@ -212,15 +212,9 @@ function ClientQuiz() {
       <section className="experience-grid">
         <aside className="story-panel">
           <div className="story-kicker"><Sparkles size={14} /> a quick note from ardy</div>
-          <h1>Let’s make<br /><em>something you’ll love.</em></h1>
-          <p className="story-lede">I’ve put together a few quick choices to help me understand what feels right to you.</p>
-          <div className="story-metrics">
-            <div><strong>02</strong><span>minutes<br />to play</span></div>
-            <div><strong>03</strong><span>simple<br />reactions</span></div>
-            <div><strong>01</strong><span>clearer<br />direction</span></div>
-          </div>
-          <div className="cat-stage side-cat"><div className="sparkle s1">✦</div><div className="sparkle s2">✦</div><Mascot mood={screen === 'complete' ? 'party' : 'wave'} size="large" /></div>
-          <p className="story-footnote">No wrong answers. Just your point of view <span>♡</span></p>
+          <p className="story-lede">I’ll ask a few simple questions to understand what you enjoy — so I can curate picks that feel just right for you.</p>
+          <div className="story-divider"><span /><b>✦</b><span /></div>
+          <div className="story-note-row"><span className="story-clock">◷</span><span>Takes about 2 minutes</span><i>·</i><span>No wrong answers</span></div>
         </aside>
 
         <section className={`quiz-window screen-${screen}`}>
