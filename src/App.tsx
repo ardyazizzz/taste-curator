@@ -196,7 +196,6 @@ function ClientQuiz() {
 
   return (
     <main className="app-shell">
-      <div className="ambient ambient-one" />
       <div className="ambient ambient-two" />
       <header className="topbar">
         <div className="brand-lockup" aria-label="Taste Curator">
