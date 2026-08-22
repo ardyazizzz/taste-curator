@@ -1,4 +1,4 @@
-# Taste Tile
+# Taste Curator
 
 A playful visual preference quiz for client discovery. The current prototype is a Vite + React + TypeScript experience with a polished client preview and a lightweight admin workspace.
 
