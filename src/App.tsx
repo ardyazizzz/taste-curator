@@ -9,7 +9,6 @@ import {
   Image as ImageIcon,
   LayoutDashboard,
   Link2,
-  LockKeyhole,
   MoreHorizontal,
   Pencil,
   Plus,
@@ -246,7 +245,7 @@ function ClientQuiz() {
 function Welcome({ onStart, completed }: { onStart: () => void; completed: boolean }) {
   return (
     <div className="welcome-view">
-      <div className="quiz-client-label"><span className="client-gem">N</span><span>NATIONGRAPH</span><LockKeyhole size={13} /></div>
+      <div className="quiz-client-label"><span>NATIONGRAPH</span></div>
       <div className="welcome-copy"><span className="eyebrow">a few choices from ardy</span><h2>Let’s find what<br /><span>feels right.</span></h2><p>Choose what you like. I’ll take it from there.</p></div>
       <Mascot mood="wave" size="hero" />
       <button className="primary-cta" onClick={onStart}>{completed ? 'See your picks' : 'Let’s go!'} <ChevronRight size={20} /></button>
