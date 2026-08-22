@@ -211,9 +211,9 @@ function ClientQuiz() {
 
       <section className="experience-grid">
         <aside className="story-panel">
-          <div className="story-kicker"><Sparkles size={14} /> a tiny game for big ideas</div>
-          <h1>Design things<br /><em>you’ll love.</em></h1>
-          <p className="story-lede">A few quick picks help your creative team find the visual feeling that’s already in your head.</p>
+          <div className="story-kicker"><Sparkles size={14} /> a quick note from ardy</div>
+          <h1>Let’s make<br /><em>something you’ll love.</em></h1>
+          <p className="story-lede">I’ve put together a few quick choices to help me understand what feels right to you.</p>
           <div className="story-metrics">
             <div><strong>02</strong><span>minutes<br />to play</span></div>
             <div><strong>03</strong><span>simple<br />reactions</span></div>
@@ -255,10 +255,10 @@ function Welcome({ onStart, completed }: { onStart: () => void; completed: boole
   return (
     <div className="welcome-view">
       <div className="quiz-client-label"><span className="client-gem">N</span><span>NATIONGRAPH</span><LockKeyhole size={13} /></div>
-      <div className="welcome-copy"><span className="eyebrow">your visual taste, unlocked</span><h2>Let’s find the<br /><span>good stuff.</span></h2><p>Quick choices. Better results. More you.</p></div>
+      <div className="welcome-copy"><span className="eyebrow">a few choices from ardy</span><h2>Let’s find what<br /><span>feels right.</span></h2><p>Choose what you like. I’ll take it from there.</p></div>
       <Mascot mood="wave" size="hero" />
       <button className="primary-cta" onClick={onStart}>{completed ? 'See your picks' : 'Let’s go!'} <ChevronRight size={20} /></button>
-      <div className="time-note"><span className="clock-dot">◷</span> Takes about 2 minutes <span className="divider-dot">·</span> No sign-up</div>
+      <div className="time-note"><span className="clock-dot">◷</span> Takes about 2 minutes <span className="divider-dot">·</span> Just tap what feels right</div>
       <div className="welcome-squiggle">✦</div>
     </div>
   )
@@ -267,8 +267,8 @@ function Welcome({ onStart, completed }: { onStart: () => void; completed: boole
 function Tutorial({ onStart }: { onStart: () => void }) {
   const steps = [
     ['▧', 'You’ll see design examples', 'A tiny gallery of directions.'],
-    ['☺', 'Choose how they feel', 'Three taps. Zero overthinking.'],
-    ['✣', 'We’ll learn your taste', 'So the next idea starts closer.'],
+    ['☺', 'Choose what feels right', 'Three taps. Zero overthinking.'],
+    ['✣', 'I’ll learn what you like', 'So our next idea starts closer.'],
   ]
   return (
     <div className="tutorial-view">
@@ -306,12 +306,12 @@ function QuizStage({ item, index, progress, total, cardState, lastAnswer, onChoo
 }
 
 function Milestone({ count, onContinue }: { count: number; onContinue: () => void }) {
-  return <div className="milestone-view"><div className="milestone-stars">✦ <span>✦</span> ✦</div><span className="eyebrow">tiny victory</span><h2>You’re on<br /><em>a roll.</em></h2><p>{count} picks in. Your visual taste is starting to take shape.</p><Mascot mood="progress" size="large" /><button className="primary-cta" onClick={onContinue}>Keep going <ArrowRight size={18} /></button></div>
+  return <div className="milestone-view"><div className="milestone-stars">✦ <span>✦</span> ✦</div><span className="eyebrow">a helpful start</span><h2>You’re on<br /><em>a roll.</em></h2><p>{count} picks in. I’m starting to see what feels right to you.</p><Mascot mood="progress" size="large" /><button className="primary-cta" onClick={onContinue}>Keep going <ArrowRight size={18} /></button></div>
 }
 
 function Complete({ loved, liked, onRestart }: { loved: QuizItem[]; liked: QuizItem[]; onRestart: () => void }) {
   const picks = loved.length ? loved : liked
-  return <div className="complete-view"><div className="confetti confetti-a">✦</div><div className="confetti confetti-b">◆</div><div className="complete-heading"><span className="eyebrow">quiz complete</span><h2>Your taste is<br /><em>taking shape.</em></h2><p>Here are a few designs that felt most like you.</p></div><div className="mini-collage">{(picks.length ? picks : quizItems.slice(0, 3)).slice(0, 3).map((item) => <div className="mini-tile" key={item.id}><div style={{ background: item.fallback }} /><img src={item.src} alt="" onError={(event) => { event.currentTarget.style.display = 'none' }} /><Heart size={13} fill="currentColor" /></div>)}</div><Mascot mood="party" size="medium" /><h3>All done! <span>🎉</span></h3><p className="complete-sub">Your preferences have been saved for the NationGraph team.</p><button className="secondary-cta light-cta" onClick={onRestart}><RotateCcw size={16} /> Play again</button></div>
+  return <div className="complete-view"><div className="confetti confetti-a">✦</div><div className="confetti confetti-b">◆</div><div className="complete-heading"><span className="eyebrow">quiz complete</span><h2>Your taste is<br /><em>taking shape.</em></h2><p>Here are a few designs that felt most like you.</p></div><div className="mini-collage">{(picks.length ? picks : quizItems.slice(0, 3)).slice(0, 3).map((item) => <div className="mini-tile" key={item.id}><div style={{ background: item.fallback }} /><img src={item.src} alt="" onError={(event) => { event.currentTarget.style.display = 'none' }} /><Heart size={13} fill="currentColor" /></div>)}</div><Mascot mood="party" size="medium" /><h3>All done! <span>🎉</span></h3><p className="complete-sub">I’ll use these preferences to guide our next design steps.</p><button className="secondary-cta light-cta" onClick={onRestart}><RotateCcw size={16} /> Play again</button></div>
 }
 
 function ZoomModal({ item, onClose }: { item: QuizItem; onClose: () => void }) {
